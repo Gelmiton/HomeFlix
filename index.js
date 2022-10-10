@@ -26,9 +26,19 @@ app.get('/home', (req , res)=>{
     res.send('<h1>Pagina Home</h1>')
 })
 
+//Rota main
+app.get('/main', (req , res)=>{
+    res.render('page/main')
+})
+
 //Rota Login
 app.get('/login', (req , res)=>{
     res.render('login')
+})
+
+//Rota Cadastro
+app.get('/cadastro', (req , res)=>{
+    res.render('cadastro')
 })
 
 //Rota filmes
