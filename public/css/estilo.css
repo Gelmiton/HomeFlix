@@ -7,31 +7,32 @@ h1{
 }
 
 .form{
-    width: 100%;
-      
-}
-
-.form-config{
     width: 40%;
     height: 400px;
-    background-color: hsl(242, 246, 245, 0.205);
+    background-color:rgba(255, 255, 255, 0.205);
     margin: 0 auto;
     text-align: center;
     border-radius: 7px;
-    
+    padding-top: 60px;
+      
 }
+
 
 .form-config a{
     text-decoration: none;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .form-config form input[type="password"], input[type="email"]{
     width: 80%;
     height: 50px;
-    border: 2px solid hsl(248, 248, 248, 0.801);
+    border: 2px solid rgba(73, 73, 73, 0.281);
     border-radius: 7px;
     background-color: aliceblue;
+    font-weight: bold;
+    font-size: 20px;
+    color:rgba(73, 73, 73, 0.6);
 }
 
 .form-config form input[type="submit"]{
@@ -42,5 +43,6 @@ h1{
 .form-config label{
     font-weight: bold;
     color: white;
+    margin-bottom: 5px;
 
 }
