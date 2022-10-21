@@ -43,7 +43,17 @@ app.get('/cadastro', (req , res)=>{
 
 //Rota filmes
 app.get('/filmes', (req , res)=>{
-    res.render('filmes')
+    res.render('page/filmes')
+})
+
+//Rota series
+app.get('/series', (req , res)=>{
+    res.render('page/series')
+})
+
+//Rota Documentarios
+app.get('/documentarios', (req , res)=>{
+    res.render('page/documentarios')
 })
 
 //Iniciando o sevidor

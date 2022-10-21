@@ -1,7 +1,8 @@
 body{
     background-image: linear-gradient(black, rgb(17, 17, 78));
     background-repeat: no-repeat;
-    background-size: 1980px 1200px;
+    background-size: 1980px auto;
+    height: 2300px;
 
 }
 
@@ -37,6 +38,7 @@ h1{
     font-weight: bold;
     font-size: 20px;
     color:rgba(73, 73, 73, 0.6);
+    
 }
 
 .form-config form input[type="submit"]{
@@ -49,4 +51,34 @@ h1{
     color: white;
     margin-bottom: 5px;
 
+}
+
+.categoria{
+  width: 80%;
+  margin-left: 10px;
+      
+}
+
+.categoria a{
+    text-decoration: none;
+    color: white;
+}
+
+.efeito:hover{
+    transition: 1s;
+    transform: scale(1.2 , 1.2)
+}
+
+.efeitoCont{
+    transition-duration: 1s;
+
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .form-config{
+        width: 97%;
+        
+    }
 }
