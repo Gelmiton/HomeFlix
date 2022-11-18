@@ -4,6 +4,9 @@ const port = 3000
 const bodyparser = require('body-parser')
 const bodyParser = require('body-parser')
 const res = require('express/lib/response')
+const usuario = require('./database/cadastro_usuario')
+//const connection = require('./database/conection')
+//const cadastrouser = require('./database/cadastro_usuario')
 
 
 //configurando body-parser
@@ -15,6 +18,15 @@ app.set('view engine' , 'ejs')
 
 //configurando arquivos estaticos
 app.use(express.static('public'))
+
+//configuração da conecção com o banco de dados
+//connection
+  //  .authenticate()
+ //   .then(()=>{
+ //       console.log('Conexão com bando de dados feito com sucesso!')
+ //  }).catch((error)=>{
+   //     console.log(error)
+  //  })
 
 //Rota principal
 app.get('/', (req , res)=>{
@@ -41,6 +53,43 @@ app.get('/cadastro', (req , res)=>{
     res.render('cadastro')
 })
 
+//Rota Validação login
+
+app.post("/login",(req, res)=>{
+    var email = req.body.email;
+    var password = req.body.password;
+    var usuarios = ["gel@gmail.com", "yan@gmail.com"];
+    
+    if (usuarios.include(email)){
+        if (senha != "123" ){
+            res.end("Senha incorreta!");
+        }else{
+            res.end("Usuario não existe!");
+        }
+        }else {
+            res.redirect('/page/main');
+
+    }
+        
+})
+   
+
+
+    
+
+//Rota Cadastro POST
+//app.post('/cadastro-user' , (req , res )=>{
+  //  cadastrouser.create({
+   //     email: req.body.email, 
+   //     senha: req.body.senha,
+   //     senha_2: req.body.senha_2
+   // }).then(function(){
+   //     res.render("/login")
+   // }).catch(function(erro){
+   //     res.send("Houve erro no cadastro, cadastro não efetuado" + erro)
+   // }) 
+//})
+
 //Rota filmes
 app.get('/filmes', (req , res)=>{
     res.render('page/filmes')
@@ -54,6 +103,11 @@ app.get('/series', (req , res)=>{
 //Rota Documentarios
 app.get('/documentarios', (req , res)=>{
     res.render('page/documentarios')
+})
+
+//Rota para Play
+app.get('/ferro', (req , res)=>{
+    res.render('page/ferro')
 })
 
 //Iniciando o sevidor

@@ -1,13 +1,15 @@
 body{
     background-image: linear-gradient(black, rgb(17, 17, 78));
     background-repeat: no-repeat;
-    background-size: 1980px auto;
-    height: 2300px;
+    background-size: 2600px auto;
+    height: 3600px;
+   
 
 }
 
 h1{
     color: chocolate;
+   
 }
 
 .form{
@@ -56,13 +58,14 @@ h1{
 .categoria{
   width: 80%;
   margin-left: 10px;
-      
+       
 }
 
 .categoria a{
     text-decoration: none;
     color: white;
 }
+
 
 .efeito:hover{
     transition: 1s;
